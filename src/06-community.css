@@ -1,0 +1,52 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Community
+   ========================================= */
+
+/* Community page */
+[class*="community"] {
+    color: var(--text-primary);
+}
+
+/* Community cards */
+[class*="community"] [class*="card"] {
+    border-color: var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Community card hover */
+[class*="community"] [class*="card"]:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Community links */
+[class*="community"] a {
+    color: var(--primary);
+}
+
+[class*="community"] a:hover {
+    color: var(--accent);
+}
+
+/* Community buttons */
+[class*="community"] button {
+    border-radius: var(--border-radius);
+}
+
+/* Primary community buttons */
+[class*="community"] button[class*="primary"] {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Community progress */
+[class*="community"] [role="progressbar"] {
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+[class*="community"] [role="progressbar"] > * {
+    background-color: var(--primary) !important;
+}
