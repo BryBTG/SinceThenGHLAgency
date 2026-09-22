@@ -1,0 +1,506 @@
+
+/* =========================================
+   SinceThen GHL Agency Theme
+   Design Tokens
+   ========================================= */
+
+:root {
+    /* Brand Colors */
+    --primary: #D94F83;
+    --secondary: #43204F;
+    --accent: #EA4C8B;
+
+    /* Supporting Colors */
+    --soft-pink: #D887A6;
+    --background-pink: #F8E4EA;
+    --light-background: #FFF7F9;
+    --white: #FFFFFF;
+
+    /* Text */
+    --text-primary: #251044;
+    --text-secondary: #6B6270;
+    --text-light: #FFFFFF;
+
+    /* Borders */
+    --border-color: #E8DDE3;
+    --border-radius: 8px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+    /* Layout */
+    --sidebar-width: 230px;
+    --sidebar-collapsed-width: 70px;
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Sidebar & Navigation
+   ========================================= */
+
+#app,
+body {
+    --sidebar-width: 230px;
+}
+
+/* Sidebar */
+nav,
+aside {
+    transition: width 0.25s ease;
+}
+
+/* Sidebar links */
+nav a,
+aside a {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Sidebar hover */
+nav a:hover,
+aside a:hover {
+    background-color: var(--background-pink) !important;
+    color: var(--primary) !important;
+}
+
+/* Active navigation item */
+nav a.active,
+aside a.active,
+nav a[aria-current="page"],
+aside a[aria-current="page"] {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Active navigation icons */
+nav a.active svg,
+aside a.active svg,
+nav a[aria-current="page"] svg,
+aside a[aria-current="page"] svg {
+    color: var(--white) !important;
+    fill: currentColor;
+}
+
+/* Navigation text */
+nav a,
+aside a {
+    font-weight: 500;
+}
+
+/* Sidebar scrollbar */
+nav::-webkit-scrollbar,
+aside::-webkit-scrollbar {
+    width: 5px;
+}
+
+nav::-webkit-scrollbar-thumb,
+aside::-webkit-scrollbar-thumb {
+    background: var(--soft-pink);
+    border-radius: 10px;
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Dashboard
+   ========================================= */
+
+/* Dashboard page background */
+main {
+    background-color: var(--light-background);
+}
+
+/* Dashboard cards */
+main [class*="card"] {
+    border-color: var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Card hover */
+main [class*="card"]:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Primary buttons */
+button[class*="primary"],
+a[class*="primary"],
+button.bg-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Primary button hover */
+button[class*="primary"]:hover,
+a[class*="primary"]:hover,
+button.bg-primary:hover {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Secondary buttons */
+button[class*="secondary"],
+a[class*="secondary"] {
+    border-color: var(--secondary) !important;
+    color: var(--secondary) !important;
+}
+
+/* Dashboard headings */
+main h1,
+main h2,
+main h3 {
+    color: var(--text-primary);
+}
+
+/* Dashboard links */
+main a {
+    color: var(--primary);
+}
+
+main a:hover {
+    color: var(--accent);
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Login Page
+   ========================================= */
+
+/* Login page background */
+body:has(form) {
+    background-color: var(--light-background);
+}
+
+/* Login container */
+form {
+    border-radius: 12px;
+}
+
+/* Login inputs */
+form input,
+form textarea,
+form select {
+    border-color: var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Input focus */
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(217, 79, 131, 0.15) !important;
+}
+
+/* Login primary button */
+form button[type="submit"] {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Login button hover */
+form button[type="submit"]:hover {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Login links */
+form a {
+    color: var(--primary);
+}
+
+form a:hover {
+    color: var(--accent);
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Community
+   ========================================= */
+
+/* Community page */
+[class*="community"] {
+    color: var(--text-primary);
+}
+
+/* Community cards */
+[class*="community"] [class*="card"] {
+    border-color: var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Community card hover */
+[class*="community"] [class*="card"]:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Community links */
+[class*="community"] a {
+    color: var(--primary);
+}
+
+[class*="community"] a:hover {
+    color: var(--accent);
+}
+
+/* Community buttons */
+[class*="community"] button {
+    border-radius: var(--border-radius);
+}
+
+/* Primary community buttons */
+[class*="community"] button[class*="primary"] {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Community progress */
+[class*="community"] [role="progressbar"] {
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+[class*="community"] [role="progressbar"] > * {
+    background-color: var(--primary) !important;
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Courses & Learning
+   ========================================= */
+
+/* Course cards */
+[class*="course"] [class*="card"],
+[class*="courses"] [class*="card"] {
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+/* Course card hover */
+[class*="course"] [class*="card"]:hover,
+[class*="courses"] [class*="card"]:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Course titles */
+[class*="course"] h1,
+[class*="course"] h2,
+[class*="course"] h3,
+[class*="courses"] h1,
+[class*="courses"] h2,
+[class*="courses"] h3 {
+    color: var(--text-primary);
+}
+
+/* Course links */
+[class*="course"] a,
+[class*="courses"] a {
+    color: var(--primary);
+}
+
+[class*="course"] a:hover,
+[class*="courses"] a:hover {
+    color: var(--accent);
+}
+
+/* Progress bar container */
+[class*="course"] [role="progressbar"],
+[class*="courses"] [role="progressbar"] {
+    height: 8px !important;
+    border-radius: 4px !important;
+    overflow: hidden;
+}
+
+/* Progress bar fill */
+[class*="course"] [role="progressbar"] > *,
+[class*="courses"] [role="progressbar"] > * {
+    height: 100%;
+    background-color: var(--primary) !important;
+    border-radius: 4px;
+}
+
+/* Progress percentage */
+[class*="course"] [class*="progress"] [class*="percentage"],
+[class*="courses"] [class*="progress"] [class*="percentage"] {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Course buttons */
+[class*="course"] button,
+[class*="courses"] button {
+    border-radius: var(--border-radius);
+}
+
+/* Primary course buttons */
+[class*="course"] button[class*="primary"],
+[class*="courses"] button[class*="primary"] {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Lesson content */
+[class*="lesson"] {
+    color: var(--text-primary);
+}
+
+/* Lesson headings */
+[class*="lesson"] h1,
+[class*="lesson"] h2,
+[class*="lesson"] h3 {
+    color: var(--text-primary);
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Responsive / Mobile
+   ========================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    :root {
+        --sidebar-width: 200px;
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    /* Prevent horizontal overflow */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Main content */
+    main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Cards */
+    main [class*="card"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Buttons */
+    button,
+    a {
+        max-width: 100%;
+    }
+
+    /* Course cards */
+    [class*="course"] [class*="card"],
+    [class*="courses"] [class*="card"] {
+        width: 100%;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main h1 {
+        font-size: 24px;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    main h3 {
+        font-size: 18px;
+    }
+
+    /* Reduce card spacing */
+    main [class*="card"] {
+        padding: 12px;
+    }
+}
+/* =========================================
+   SinceThen GHL Agency Theme
+   Platform Fixes
+   ========================================= */
+
+/* Prevent unwanted horizontal scrolling */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default image overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Consistent focus state */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px;
+}
+
+/* Smooth transitions */
+button,
+a,
+input,
+textarea,
+select {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Remove unwanted text decoration */
+a {
+    text-decoration: none;
+}
+
+/* Utility: hide element */
+.since-then-hidden {
+    display: none !important;
+}
+
+/* Utility: visually hide element */
+.since-then-visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
