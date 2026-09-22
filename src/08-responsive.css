@@ -1,0 +1,80 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Responsive / Mobile
+   ========================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    :root {
+        --sidebar-width: 200px;
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    /* Prevent horizontal overflow */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Main content */
+    main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Cards */
+    main [class*="card"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Buttons */
+    button,
+    a {
+        max-width: 100%;
+    }
+
+    /* Course cards */
+    [class*="course"] [class*="card"],
+    [class*="courses"] [class*="card"] {
+        width: 100%;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main h1 {
+        font-size: 24px;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    main h3 {
+        font-size: 18px;
+    }
+
+    /* Reduce card spacing */
+    main [class*="card"] {
+        padding: 12px;
+    }
+}
