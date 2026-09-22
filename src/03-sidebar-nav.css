@@ -1,0 +1,66 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Sidebar & Navigation
+   ========================================= */
+
+#app,
+body {
+    --sidebar-width: 230px;
+}
+
+/* Sidebar */
+nav,
+aside {
+    transition: width 0.25s ease;
+}
+
+/* Sidebar links */
+nav a,
+aside a {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Sidebar hover */
+nav a:hover,
+aside a:hover {
+    background-color: var(--background-pink) !important;
+    color: var(--primary) !important;
+}
+
+/* Active navigation item */
+nav a.active,
+aside a.active,
+nav a[aria-current="page"],
+aside a[aria-current="page"] {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Active navigation icons */
+nav a.active svg,
+aside a.active svg,
+nav a[aria-current="page"] svg,
+aside a[aria-current="page"] svg {
+    color: var(--white) !important;
+    fill: currentColor;
+}
+
+/* Navigation text */
+nav a,
+aside a {
+    font-weight: 500;
+}
+
+/* Sidebar scrollbar */
+nav::-webkit-scrollbar,
+aside::-webkit-scrollbar {
+    width: 5px;
+}
+
+nav::-webkit-scrollbar-thumb,
+aside::-webkit-scrollbar-thumb {
+    background: var(--soft-pink);
+    border-radius: 10px;
+}
