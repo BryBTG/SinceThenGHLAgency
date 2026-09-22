@@ -1,0 +1,61 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Dashboard
+   ========================================= */
+
+/* Dashboard page background */
+main {
+    background-color: var(--light-background);
+}
+
+/* Dashboard cards */
+main [class*="card"] {
+    border-color: var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Card hover */
+main [class*="card"]:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Primary buttons */
+button[class*="primary"],
+a[class*="primary"],
+button.bg-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Primary button hover */
+button[class*="primary"]:hover,
+a[class*="primary"]:hover,
+button.bg-primary:hover {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Secondary buttons */
+button[class*="secondary"],
+a[class*="secondary"] {
+    border-color: var(--secondary) !important;
+    color: var(--secondary) !important;
+}
+
+/* Dashboard headings */
+main h1,
+main h2,
+main h3 {
+    color: var(--text-primary);
+}
+
+/* Dashboard links */
+main a {
+    color: var(--primary);
+}
+
+main a:hover {
+    color: var(--accent);
+}
