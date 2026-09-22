@@ -1,0 +1,70 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Platform Fixes
+   ========================================= */
+
+/* Prevent unwanted horizontal scrolling */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default image overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Consistent focus state */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 2px;
+}
+
+/* Smooth transitions */
+button,
+a,
+input,
+textarea,
+select {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Remove unwanted text decoration */
+a {
+    text-decoration: none;
+}
+
+/* Utility: hide element */
+.since-then-hidden {
+    display: none !important;
+}
+
+/* Utility: visually hide element */
+.since-then-visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
