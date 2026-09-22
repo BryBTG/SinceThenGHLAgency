@@ -1,0 +1,53 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Login Page
+   ========================================= */
+
+/* Login page background */
+body:has(form) {
+    background-color: var(--light-background);
+}
+
+/* Login container */
+form {
+    border-radius: 12px;
+}
+
+/* Login inputs */
+form input,
+form textarea,
+form select {
+    border-color: var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Input focus */
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(217, 79, 131, 0.15) !important;
+}
+
+/* Login primary button */
+form button[type="submit"] {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Login button hover */
+form button[type="submit"]:hover {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Login links */
+form a {
+    color: var(--primary);
+}
+
+form a:hover {
+    color: var(--accent);
+}
