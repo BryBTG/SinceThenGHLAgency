@@ -1,0 +1,89 @@
+/* =========================================
+   SinceThen GHL Agency Theme
+   Courses & Learning
+   ========================================= */
+
+/* Course cards */
+[class*="course"] [class*="card"],
+[class*="courses"] [class*="card"] {
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+/* Course card hover */
+[class*="course"] [class*="card"]:hover,
+[class*="courses"] [class*="card"]:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Course titles */
+[class*="course"] h1,
+[class*="course"] h2,
+[class*="course"] h3,
+[class*="courses"] h1,
+[class*="courses"] h2,
+[class*="courses"] h3 {
+    color: var(--text-primary);
+}
+
+/* Course links */
+[class*="course"] a,
+[class*="courses"] a {
+    color: var(--primary);
+}
+
+[class*="course"] a:hover,
+[class*="courses"] a:hover {
+    color: var(--accent);
+}
+
+/* Progress bar container */
+[class*="course"] [role="progressbar"],
+[class*="courses"] [role="progressbar"] {
+    height: 8px !important;
+    border-radius: 4px !important;
+    overflow: hidden;
+}
+
+/* Progress bar fill */
+[class*="course"] [role="progressbar"] > *,
+[class*="courses"] [role="progressbar"] > * {
+    height: 100%;
+    background-color: var(--primary) !important;
+    border-radius: 4px;
+}
+
+/* Progress percentage */
+[class*="course"] [class*="progress"] [class*="percentage"],
+[class*="courses"] [class*="progress"] [class*="percentage"] {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Course buttons */
+[class*="course"] button,
+[class*="courses"] button {
+    border-radius: var(--border-radius);
+}
+
+/* Primary course buttons */
+[class*="course"] button[class*="primary"],
+[class*="courses"] button[class*="primary"] {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+/* Lesson content */
+[class*="lesson"] {
+    color: var(--text-primary);
+}
+
+/* Lesson headings */
+[class*="lesson"] h1,
+[class*="lesson"] h2,
+[class*="lesson"] h3 {
+    color: var(--text-primary);
+}
