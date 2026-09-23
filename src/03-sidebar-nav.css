@@ -1,164 +1,234 @@
 /* =========================================
    Since Then GHL Agency Theme
    Sidebar & Navigation
+
+   Soft Pink / Pale Pink Palette
+   Based on the actual Ivorey/GHL sidebar-v2
+   structure.
    ========================================= */
 
-/*
-   Current Ivorey sidebar structure:
-   .hl_nav-header
-     nav[aria-label="header"]
-       #sb_launchpad
-       #sb_dashboard
-       #sb_conversations
-       #sb_calendars
-       #sb_contacts
-       #sb_opportunities
-       #sb_payments
-       etc.
-*/
 
 /* =========================================
-   SIDEBAR CONTAINER
+   SIDEBAR BACKGROUND
    ========================================= */
 
-/* Main sidebar - Soft Pink */
-.hl_nav-header {
-    background-color: var(--soft-pink) !important;
-    color: var(--text-primary) !important;
+.sidebar-v2-agency #sidebar-v2 .default-bg-color,
+.sidebar-v2-agency #sidebar-v2.default-bg-color,
+
+.sidebar-v2-location #sidebar-v2 .default-bg-color,
+.sidebar-v2-location #sidebar-v2.default-bg-color {
+    background: #F8E4EA !important;
 }
 
-/* Main sidebar navigation */
-.hl_nav-header nav[aria-label="header"] {
-    background-color: var(--soft-pink) !important;
-    color: var(--text-primary) !important;
-    border-right: 1px solid var(--soft-pink) !important;
-}
 
 /* =========================================
-   NAVIGATION LINKS
+   SIDEBAR BASE
    ========================================= */
 
-.hl_nav-header nav[aria-label="header"] > a,
-.hl_nav-header nav[aria-label="header"] a {
-    background-color: transparent !important;
-    color: var(--text-primary) !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
+.sidebar-v2-agency #sidebar-v2,
+.sidebar-v2-location #sidebar-v2 {
+    background: #F8E4EA !important;
+}
+
+
+/* =========================================
+   SIDEBAR NAVIGATION LINKS
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a {
+    color: #8F6878 !important;
+    border-radius: 6px !important;
     transition:
         background-color 0.2s ease,
-        color 0.2s ease,
-        box-shadow 0.2s ease !important;
+        color 0.2s ease;
 }
 
-/* Navigation text */
-.hl_nav-header nav[aria-label="header"] > a span,
-.hl_nav-header nav[aria-label="header"] a span {
-    color: inherit !important;
-}
-
-/* Navigation icons */
-.hl_nav-header nav[aria-label="header"] > a svg,
-.hl_nav-header nav[aria-label="header"] a svg {
-    color: currentColor !important;
-}
 
 /* =========================================
-   HOVER STATE
+   SIDEBAR HOVER
    ========================================= */
 
-.hl_nav-header nav[aria-label="header"] > a:hover,
-.hl_nav-header nav[aria-label="header"] a:hover {
-    background-color: var(--primary) !important;
-    color: var(--white) !important;
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover:not(.active),
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a:hover,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover {
+    background: #FCEFF3 !important;
+    color: #C77A96 !important;
 }
 
-.hl_nav-header nav[aria-label="header"] > a:hover span,
-.hl_nav-header nav[aria-label="header"] a:hover span,
-.hl_nav-header nav[aria-label="header"] > a:hover svg,
-.hl_nav-header nav[aria-label="header"] a:hover svg {
-    color: var(--white) !important;
-}
 
 /* =========================================
    ACTIVE NAVIGATION ITEM
    ========================================= */
 
-.hl_nav-header nav[aria-label="header"] > a.active,
-.hl_nav-header nav[aria-label="header"] > a.router-link-active,
-.hl_nav-header nav[aria-label="header"] > a[aria-current="page"],
-.hl_nav-header nav[aria-label="header"] a.active,
-.hl_nav-header nav[aria-label="header"] a.router-link-active,
-.hl_nav-header nav[aria-label="header"] a[aria-current="page"] {
-    background-color: var(--primary) !important;
-    color: var(--white) !important;
-    box-shadow: none !important;
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a.active,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active {
+    background: #E8A8BC !important;
+    color: #FFFFFF !important;
 }
 
-/* Active text */
-.hl_nav-header nav[aria-label="header"] > a.active span,
-.hl_nav-header nav[aria-label="header"] > a.router-link-active span,
-.hl_nav-header nav[aria-label="header"] > a[aria-current="page"] span,
-.hl_nav-header nav[aria-label="header"] a.active span,
-.hl_nav-header nav[aria-label="header"] a.router-link-active span,
-.hl_nav-header nav[aria-label="header"] a[aria-current="page"] span {
-    color: var(--white) !important;
-}
-
-/* Active icons */
-.hl_nav-header nav[aria-label="header"] > a.active svg,
-.hl_nav-header nav[aria-label="header"] > a.router-link-active svg,
-.hl_nav-header nav[aria-label="header"] > a[aria-current="page"] svg,
-.hl_nav-header nav[aria-label="header"] a.active svg,
-.hl_nav-header nav[aria-label="header"] a.router-link-active svg,
-.hl_nav-header nav[aria-label="header"] a[aria-current="page"] svg {
-    color: var(--white) !important;
-    fill: currentColor;
-}
 
 /* =========================================
-   SIDEBAR TEXT
+   ACTIVE NAVIGATION ICONS
    ========================================= */
 
-.hl_nav-header nav[aria-label="header"] a {
-    font-weight: 500;
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a.active svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active svg,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active svg {
+    color: #FFFFFF !important;
+    stroke: currentColor !important;
 }
+
+
+/* =========================================
+   HOVER NAVIGATION ICONS
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a:hover svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover svg,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover svg {
+    color: #C77A96 !important;
+    stroke: currentColor !important;
+}
+
+
+/* =========================================
+   NAVIGATION TEXT
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a span,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a span,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a span,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a span,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a span,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a span {
+    color: inherit !important;
+}
+
+
+/* =========================================
+   ACTIVE NAVIGATION TEXT
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active span,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a.active span,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active span,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active span,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active span,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active span {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================
+   SIDEBAR HEADER
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header {
+    background: #F8E4EA !important;
+}
+
+
+/* =========================================
+   SIDEBAR SETTINGS AREA
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings {
+    background: #F8E4EA !important;
+}
+
+
+/* =========================================
+   SIDEBAR DIVIDERS
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 hr,
+.sidebar-v2-location #sidebar-v2 hr {
+    border-color: #EED8DF !important;
+}
+
+
+/* =========================================
+   SIDEBAR SEARCH
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 input,
+.sidebar-v2-location #sidebar-v2 input {
+    background: #FCEFF3 !important;
+    border-color: #EED8DF !important;
+    color: #8F6878 !important;
+}
+
 
 /* =========================================
    SIDEBAR SCROLLBAR
    ========================================= */
 
-.hl_nav-header nav[aria-label="header"]::-webkit-scrollbar {
+.sidebar-v2-agency #sidebar-v2::-webkit-scrollbar,
+.sidebar-v2-location #sidebar-v2::-webkit-scrollbar {
     width: 5px;
 }
 
-.hl_nav-header nav[aria-label="header"]::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.hl_nav-header nav[aria-label="header"]::-webkit-scrollbar-thumb {
-    background: var(--primary);
+.sidebar-v2-agency #sidebar-v2::-webkit-scrollbar-thumb,
+.sidebar-v2-location #sidebar-v2::-webkit-scrollbar-thumb {
+    background: #E8A8BC;
     border-radius: 10px;
 }
 
-.hl_nav-header nav[aria-label="header"]::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+.sidebar-v2-agency #sidebar-v2::-webkit-scrollbar-track,
+.sidebar-v2-location #sidebar-v2::-webkit-scrollbar-track {
+    background: transparent;
 }
 
+
 /* =========================================
-   SIDEBAR WIDTH
+   DISABLED NAVIGATION
    ========================================= */
 
-#app {
-    --sidebar-width: 230px;
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.disabled,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.disabled,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.disabled,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.disabled {
+    opacity: 0.6;
 }
 
+
 /* =========================================
-   MOBILE / COLLAPSED NAVIGATION
+   FOCUS STATE
    ========================================= */
 
-@media (max-width: 768px) {
-    .hl_nav-header nav[aria-label="header"] > a,
-    .hl_nav-header nav[aria-label="header"] a {
-        border-radius: 6px !important;
-    }
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:focus-visible,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a:focus-visible,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:focus-visible,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:focus-visible,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:focus-visible,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:focus-visible {
+    outline: 2px solid #E8A8BC !important;
+    outline-offset: 2px;
 }
