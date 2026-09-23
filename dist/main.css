@@ -42,7 +42,6 @@
    Current Ivorey sidebar structure:
    .hl_nav-header
      nav[aria-label="header"]
-       navigation links such as:
        #sb_launchpad
        #sb_dashboard
        #sb_conversations
@@ -57,16 +56,17 @@
    SIDEBAR CONTAINER
    ========================================= */
 
+/* Main sidebar - Soft Pink */
 .hl_nav-header {
-    background-color: var(--secondary) !important;
-    color: var(--white) !important;
+    background-color: var(--soft-pink) !important;
+    color: var(--text-primary) !important;
 }
 
 /* Main sidebar navigation */
 .hl_nav-header nav[aria-label="header"] {
-    background-color: var(--secondary) !important;
-    color: var(--white) !important;
-    border-right: 1px solid var(--secondary) !important;
+    background-color: var(--soft-pink) !important;
+    color: var(--text-primary) !important;
+    border-right: 1px solid var(--soft-pink) !important;
 }
 
 /* =========================================
@@ -76,7 +76,7 @@
 .hl_nav-header nav[aria-label="header"] > a,
 .hl_nav-header nav[aria-label="header"] a {
     background-color: transparent !important;
-    color: var(--white) !important;
+    color: var(--text-primary) !important;
     border-radius: 8px !important;
     text-decoration: none !important;
     transition:
@@ -107,7 +107,8 @@
     color: var(--white) !important;
 }
 
-/* Hover icons */
+.hl_nav-header nav[aria-label="header"] > a:hover span,
+.hl_nav-header nav[aria-label="header"] a:hover span,
 .hl_nav-header nav[aria-label="header"] > a:hover svg,
 .hl_nav-header nav[aria-label="header"] a:hover svg {
     color: var(--white) !important;
@@ -116,12 +117,6 @@
 /* =========================================
    ACTIVE NAVIGATION ITEM
    ========================================= */
-
-/*
-   Ivorey/HighLevel adds active-related classes/attributes
-   depending on the current route. These selectors cover
-   the common active states without changing unrelated links.
-*/
 
 .hl_nav-header nav[aria-label="header"] > a.active,
 .hl_nav-header nav[aria-label="header"] > a.router-link-active,
@@ -156,7 +151,7 @@
 }
 
 /* =========================================
-   SIDEBAR LABELS
+   SIDEBAR TEXT
    ========================================= */
 
 .hl_nav-header nav[aria-label="header"] a {
@@ -176,12 +171,12 @@
 }
 
 .hl_nav-header nav[aria-label="header"]::-webkit-scrollbar-thumb {
-    background: var(--soft-pink);
+    background: var(--primary);
     border-radius: 10px;
 }
 
 .hl_nav-header nav[aria-label="header"]::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
+    background: var(--accent);
 }
 
 /* =========================================
