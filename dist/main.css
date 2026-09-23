@@ -72,20 +72,38 @@
 /* =========================================
    Since Then GHL Agency Theme
    Sidebar & Navigation
-
-   Soft Pink / Pale Pink Palette
-   Based on the actual Ivorey/GHL sidebar-v2
-   structure.
+   Soft Pink GHL Theme
    ========================================= */
+
+/*
+ * GHL SIDEBAR STRUCTURE
+ *
+ * Agency:
+ * .sidebar-v2-agency #sidebar-v2
+ *
+ * Location:
+ * .sidebar-v2-location #sidebar-v2
+ *
+ * Main navigation:
+ * .hl_nav-header nav
+ *
+ * Settings navigation:
+ * .hl_nav-settings nav
+ *
+ * Reference:
+ * GHL sidebar-v2 structure
+ */
 
 
 /* =========================================
    SIDEBAR BACKGROUND
    ========================================= */
 
+/* Agency */
 .sidebar-v2-agency #sidebar-v2 .default-bg-color,
 .sidebar-v2-agency #sidebar-v2.default-bg-color,
 
+/* Locations */
 .sidebar-v2-location #sidebar-v2 .default-bg-color,
 .sidebar-v2-location #sidebar-v2.default-bg-color {
     background: #F8E4EA !important;
@@ -93,7 +111,7 @@
 
 
 /* =========================================
-   SIDEBAR BASE
+   SIDEBAR CONTAINER
    ========================================= */
 
 .sidebar-v2-agency #sidebar-v2,
@@ -106,81 +124,21 @@
    SIDEBAR NAVIGATION LINKS
    ========================================= */
 
+/* Agency */
 .sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a,
 .sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a,
 
+/* Locations */
 .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a {
-    color: #8F6878 !important;
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a {
+    background: transparent !important;
+    color: #4A3A42 !important;
     border-radius: 6px !important;
+    text-decoration: none !important;
+
     transition:
         background-color 0.2s ease,
         color 0.2s ease;
-}
-
-
-/* =========================================
-   SIDEBAR HOVER
-   ========================================= */
-
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover:not(.active),
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a:hover,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover,
-
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover {
-    background: #FCEFF3 !important;
-    color: #C77A96 !important;
-}
-
-
-/* =========================================
-   ACTIVE NAVIGATION ITEM
-   ========================================= */
-
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a.active,
-
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active {
-    background: #E8A8BC !important;
-    color: #FFFFFF !important;
-}
-
-
-/* =========================================
-   ACTIVE NAVIGATION ICONS
-   ========================================= */
-
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active svg,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a.active svg,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active svg,
-
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active svg,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active svg,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active svg {
-    color: #FFFFFF !important;
-    stroke: currentColor !important;
-}
-
-
-/* =========================================
-   HOVER NAVIGATION ICONS
-   ========================================= */
-
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover svg,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a:hover svg,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover svg,
-
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover svg,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover svg,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:hover svg {
-    color: #C77A96 !important;
-    stroke: currentColor !important;
 }
 
 
@@ -189,58 +147,124 @@
    ========================================= */
 
 .sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a span,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a span,
 .sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a span,
 
 .sidebar-v2-location #sidebar-v2 .hl_nav-header nav a span,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a span,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a span {
-    color: inherit !important;
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a span {
+    color: #4A3A42 !important;
 }
 
 
 /* =========================================
-   ACTIVE NAVIGATION TEXT
+   NAVIGATION ICONS
    ========================================= */
 
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active span,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a.active span,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active span,
+/*
+ * Brighter soft pink for visibility.
+ *
+ * We target both SVG and common SVG paths
+ * because GHL may render icons differently
+ * depending on the menu item.
+ */
 
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active span,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active span,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a.active span {
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a svg *,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a svg *,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a svg *,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a svg * {
+    color: #D99AAE !important;
+    stroke: #D99AAE !important;
+}
+
+
+/* =========================================
+   HOVER STATE
+   ========================================= */
+
+/* Agency */
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover:not(.active),
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover:not(.active),
+
+/* Locations */
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover:not(.active),
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) {
+    background: #FCEFF3 !important;
+    color: #3F3037 !important;
+}
+
+
+/* Hover text */
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover:not(.active) span,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) span,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover:not(.active) span,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) span {
+    color: #3F3037 !important;
+}
+
+
+/* Hover icons */
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover:not(.active) svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:hover:not(.active) svg *,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) svg *,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover:not(.active) svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:hover:not(.active) svg *,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:hover:not(.active) svg * {
+    color: #D4779D !important;
+    stroke: #D4779D !important;
+}
+
+
+/* =========================================
+   ACTIVE MENU
+   ========================================= */
+
+/*
+ * Leave GHL's existing active-menu styling
+ * intact.
+ *
+ * We only make sure the active item remains
+ * readable.
+ */
+
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active {
     color: #FFFFFF !important;
 }
 
 
-/* =========================================
-   SIDEBAR HEADER
-   ========================================= */
+/* Active text */
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active span,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active span,
 
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header {
-    background: #F8E4EA !important;
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active span,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active span {
+    color: #FFFFFF !important;
 }
 
 
-/* =========================================
-   SIDEBAR SETTINGS AREA
-   ========================================= */
+/* Active icons */
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.active svg *,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.active svg *,
 
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings {
-    background: #F8E4EA !important;
-}
-
-
-/* =========================================
-   SIDEBAR DIVIDERS
-   ========================================= */
-
-.sidebar-v2-agency #sidebar-v2 hr,
-.sidebar-v2-location #sidebar-v2 hr {
-    border-color: #EED8DF !important;
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.active svg *,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.active svg * {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
 }
 
 
@@ -250,9 +274,24 @@
 
 .sidebar-v2-agency #sidebar-v2 input,
 .sidebar-v2-location #sidebar-v2 input {
-    background: #FCEFF3 !important;
-    border-color: #EED8DF !important;
-    color: #8F6878 !important;
+    color: #4A3A42 !important;
+}
+
+
+/* Search placeholder */
+.sidebar-v2-agency #sidebar-v2 input::placeholder,
+.sidebar-v2-location #sidebar-v2 input::placeholder {
+    color: #765F69 !important;
+}
+
+
+/* =========================================
+   SIDEBAR DIVIDERS
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 hr,
+.sidebar-v2-location #sidebar-v2 hr {
+    border-color: #EED0D9 !important;
 }
 
 
@@ -267,41 +306,48 @@
 
 .sidebar-v2-agency #sidebar-v2::-webkit-scrollbar-thumb,
 .sidebar-v2-location #sidebar-v2::-webkit-scrollbar-thumb {
-    background: #E8A8BC;
+    background: #D99AAE !important;
     border-radius: 10px;
 }
 
 .sidebar-v2-agency #sidebar-v2::-webkit-scrollbar-track,
 .sidebar-v2-location #sidebar-v2::-webkit-scrollbar-track {
-    background: transparent;
+    background: #F8E4EA !important;
 }
 
 
 /* =========================================
-   DISABLED NAVIGATION
+   SETTINGS
    ========================================= */
 
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a.disabled,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a.disabled,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a.disabled,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a.disabled {
-    opacity: 0.6;
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a {
+    color: #4A3A42 !important;
+}
+
+
+/* Settings icons */
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a svg,
+.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a svg *,
+
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a svg,
+.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a svg * {
+    color: #D99AAE !important;
+    stroke: #D99AAE !important;
 }
 
 
 /* =========================================
-   FOCUS STATE
+   RESPONSIVE SIDEBAR
    ========================================= */
 
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header nav a:focus-visible,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-header-without-footer nav a:focus-visible,
-.sidebar-v2-agency #sidebar-v2 .hl_nav-settings nav a:focus-visible,
+@media (max-width: 768px) {
 
-.sidebar-v2-location #sidebar-v2 .hl_nav-header nav a:focus-visible,
-.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer nav a:focus-visible,
-.sidebar-v2-location #sidebar-v2 .hl_nav-settings nav a:focus-visible {
-    outline: 2px solid #E8A8BC !important;
-    outline-offset: 2px;
+    .sidebar-v2-agency #sidebar-v2,
+    .sidebar-v2-location #sidebar-v2 {
+        background: #F8E4EA !important;
+    }
+
 }
 /* =========================================
    SinceThen GHL Agency Theme
