@@ -1,34 +1,70 @@
 /* =========================================
-   SinceThen GHL Agency Theme
+   Since Then GHL Agency Theme
    Design Tokens
+   Soft Pink Theme
    ========================================= */
 
 :root {
-    /* Brand Colors */
-    --primary: #D94F83;
-    --secondary: #43204F;
-    --accent: #EA4C8B;
 
-    /* Supporting Colors */
-    --soft-pink: #D887A6;
+    /* =========================================
+       BRAND COLORS
+       ========================================= */
+
+    --primary: #E8A8BC;
+    --secondary: #C77A96;
+    --accent: #D99AAE;
+
+
+    /* =========================================
+       PINK PALETTE
+       ========================================= */
+
+    --pale-pink: #F8E4EA;
+    --soft-pink: #E8A8BC;
+    --light-pink: #FCEFF3;
+    --very-light-pink: #FFF7F9;
+    --dusty-pink: #C77A96;
+    --border-pink: #EED8DF;
+
+
+    /* =========================================
+       BACKGROUNDS
+       ========================================= */
+
     --background-pink: #F8E4EA;
     --light-background: #FFF7F9;
     --white: #FFFFFF;
 
-    /* Text */
-    --text-primary: #251044;
-    --text-secondary: #6B6270;
+
+    /* =========================================
+       TEXT
+       ========================================= */
+
+    --text-primary: #765665;
+    --text-secondary: #9A7A88;
     --text-light: #FFFFFF;
 
-    /* Borders */
-    --border-color: #E8DDE3;
+
+    /* =========================================
+       BORDERS
+       ========================================= */
+
+    --border-color: #EED8DF;
     --border-radius: 8px;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
 
-    /* Layout */
+    /* =========================================
+       SHADOWS
+       ========================================= */
+
+    --shadow-sm: 0 1px 3px rgba(190, 130, 150, 0.08);
+    --shadow-md: 0 4px 12px rgba(190, 130, 150, 0.12);
+
+
+    /* =========================================
+       LAYOUT
+       ========================================= */
+
     --sidebar-width: 230px;
     --sidebar-collapsed-width: 70px;
 }
