@@ -36,69 +36,767 @@
 /* =========================================
    SinceThen GHL Agency Theme
    Sidebar & Navigation
+   Reference-based from previous Since Then CSS
    ========================================= */
 
-#app,
-body {
-    --sidebar-width: 230px;
+/* =========================================
+   SIDEBAR CONTAINER
+   ========================================= */
+
+aside,
+.sidebar,
+.sidebar-v2,
+#sidebar-v2,
+nav.sidebar {
+    background: var(--light-background) !important;
+    color: var(--text-primary) !important;
+    border-right: 1px solid var(--border-color) !important;
 }
 
-/* Sidebar */
-nav,
-aside {
-    transition: width 0.25s ease;
+/* =========================================
+   SIDEBAR NAVIGATION LINKS
+   ========================================= */
+
+aside a,
+.sidebar a,
+.sidebar-v2 a,
+#sidebar-v2 a,
+nav.sidebar a {
+    background: transparent !important;
+    color: var(--secondary) !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    align-items: center;
 }
 
-/* Sidebar links */
-nav a,
-aside a {
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
+/* =========================================
+   NORMAL SIDEBAR TEXT
+   ========================================= */
+
+aside a:not(.active) span,
+aside a:not(.active) div,
+aside a:not(.active) p,
+.sidebar a:not(.active) span,
+.sidebar a:not(.active) div,
+.sidebar a:not(.active) p,
+.sidebar-v2 a:not(.active) span,
+.sidebar-v2 a:not(.active) div,
+.sidebar-v2 a:not(.active) p,
+#sidebar-v2 a:not(.active) span,
+#sidebar-v2 a:not(.active) div,
+#sidebar-v2 a:not(.active) p,
+nav.sidebar a:not(.active) span,
+nav.sidebar a:not(.active) div,
+nav.sidebar a:not(.active) p {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-/* Sidebar hover */
-nav a:hover,
-aside a:hover {
-    background-color: var(--background-pink) !important;
-    color: var(--primary) !important;
+/* =========================================
+   SIDEBAR INLINE SVG ICONS
+   ========================================= */
+
+aside a:not(.active) svg,
+.sidebar a:not(.active) svg,
+.sidebar-v2 a:not(.active) svg,
+#sidebar-v2 a:not(.active) svg,
+nav.sidebar a:not(.active) svg {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
 }
 
-/* Active navigation item */
-nav a.active,
+aside a:not(.active) svg *,
+.sidebar a:not(.active) svg *,
+.sidebar-v2 a:not(.active) svg *,
+#sidebar-v2 a:not(.active) svg *,
+nav.sidebar a:not(.active) svg * {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* =========================================
+   FONT ICONS
+   ========================================= */
+
+aside a:not(.active) i,
+aside a:not(.active) [class*="icon"],
+aside a:not(.active) [class*="Icon"],
+aside a:not(.active) [class*="ico"],
+.sidebar a:not(.active) i,
+.sidebar a:not(.active) [class*="icon"],
+.sidebar a:not(.active) [class*="Icon"],
+.sidebar a:not(.active) [class*="ico"],
+.sidebar-v2 a:not(.active) i,
+.sidebar-v2 a:not(.active) [class*="icon"],
+.sidebar-v2 a:not(.active) [class*="Icon"],
+.sidebar-v2 a:not(.active) [class*="ico"],
+#sidebar-v2 a:not(.active) i,
+#sidebar-v2 a:not(.active) [class*="icon"],
+#sidebar-v2 a:not(.active) [class*="Icon"],
+#sidebar-v2 a:not(.active) [class*="ico"],
+nav.sidebar a:not(.active) i,
+nav.sidebar a:not(.active) [class*="icon"],
+nav.sidebar a:not(.active) [class*="Icon"],
+nav.sidebar a:not(.active) [class*="ico"] {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* =========================================
+   EXTERNAL SIDEBAR IMAGE ICONS
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 img[src*="/sidebar-v2/"],
+.sidebar-v2 #sidebar-v2 img[src*="/sidebar-v2/"],
+#sidebar-v2 img[src*="/sidebar-v2/"],
+aside img[src*="/sidebar-v2/"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(14%)
+        sepia(30%)
+        saturate(2107%)
+        hue-rotate(246deg)
+        brightness(76%)
+        contrast(105%) !important;
+}
+
+/* =========================================
+   EXTERNAL SIDEBAR ICONS
+   ========================================= */
+
+img[alt="Launchpad icon"],
+img[alt="Dashboard icon"],
+img[alt="Conversations icon"],
+img[alt="Calendars icon"],
+img[alt="Contacts icon"],
+img[alt="Opportunities icon"],
+img[alt="Payments icon"],
+img[alt="AI Agents icon"],
+img[alt="Marketing icon"],
+img[alt="Sites icon"],
+img[alt="Automation icon"],
+img[alt="Memberships icon"],
+img[alt="Media Storage icon"],
+img[alt="Reputation icon"],
+img[alt="Reporting icon"],
+img[alt="Settings icon"],
+img[alt="App Marketplace icon"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(14%)
+        sepia(30%)
+        saturate(2107%)
+        hue-rotate(246deg)
+        brightness(76%)
+        contrast(105%) !important;
+}
+
+/* =========================================
+   PROSPECTING ICON
+   ========================================= */
+
+img[alt="Prospecting icon"],
+img[src*="assets.cdn.filesafe.space"][src*=".svg"],
+img[src*="63d902791be71b1427bfce58.svg+xml"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(14%)
+        sepia(30%)
+        saturate(2107%)
+        hue-rotate(246deg)
+        brightness(76%)
+        contrast(105%) !important;
+}
+
+a:hover img[alt="Prospecting icon"],
+a:hover img[src*="63d902791be71b1427bfce58.svg+xml"] {
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(33%)
+        sepia(34%)
+        saturate(1168%)
+        hue-rotate(299deg)
+        brightness(95%)
+        contrast(91%) !important;
+}
+
+/* =========================================
+   SIDEBAR HOVER
+   ========================================= */
+
+aside a:not(.active):hover,
+.sidebar a:not(.active):hover,
+.sidebar-v2 a:not(.active):hover,
+#sidebar-v2 a:not(.active):hover,
+nav.sidebar a:not(.active):hover {
+    background: rgba(255, 255, 255, 0.72) !important;
+    color: var(--text-primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+aside a:not(.active):hover span,
+aside a:not(.active):hover div,
+aside a:not(.active):hover p,
+.sidebar a:not(.active):hover span,
+.sidebar a:not(.active):hover div,
+.sidebar a:not(.active):hover p,
+.sidebar-v2 a:not(.active):hover span,
+.sidebar-v2 a:not(.active):hover div,
+.sidebar-v2 a:not(.active):hover p,
+#sidebar-v2 a:not(.active):hover span,
+#sidebar-v2 a:not(.active):hover div,
+#sidebar-v2 a:not(.active):hover p,
+nav.sidebar a:not(.active):hover span,
+nav.sidebar a:not(.active):hover div,
+nav.sidebar a:not(.active):hover p {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* =========================================
+   ACTIVE SIDEBAR ITEM
+   ========================================= */
+
 aside a.active,
-nav a[aria-current="page"],
-aside a[aria-current="page"] {
-    background-color: var(--primary) !important;
-    color: var(--white) !important;
+.sidebar a.active,
+.sidebar-v2 a.active,
+#sidebar-v2 a.active,
+nav.sidebar a.active,
+aside [aria-current="page"],
+.sidebar [aria-current="page"],
+.sidebar-v2 [aria-current="page"],
+#sidebar-v2 [aria-current="page"] {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: var(--shadow-md) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-/* Active navigation icons */
-nav a.active svg,
+/* Active text */
+
+aside a.active span,
+aside a.active div,
+aside a.active p,
+.sidebar a.active span,
+.sidebar a.active div,
+.sidebar a.active p,
+.sidebar-v2 a.active span,
+.sidebar-v2 a.active div,
+.sidebar-v2 a.active p,
+#sidebar-v2 a.active span,
+#sidebar-v2 a.active div,
+#sidebar-v2 a.active p,
+nav.sidebar a.active span,
+nav.sidebar a.active div,
+nav.sidebar a.active p {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* =========================================
+   ACTIVE INLINE ICONS
+   ========================================= */
+
 aside a.active svg,
-nav a[aria-current="page"] svg,
-aside a[aria-current="page"] svg {
+.sidebar a.active svg,
+.sidebar-v2 a.active svg,
+#sidebar-v2 a.active svg,
+nav.sidebar a.active svg {
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
+    stroke: var(--primary) !important;
+}
+
+aside a.active svg *,
+.sidebar a.active svg *,
+.sidebar-v2 a.active svg *,
+#sidebar-v2 a.active svg *,
+nav.sidebar a.active svg * {
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
+    stroke: var(--primary) !important;
+}
+
+/* =========================================
+   ACTIVE EXTERNAL IMAGE ICONS
+   ========================================= */
+
+aside a.active img[src*="/sidebar-v2/"],
+.sidebar a.active img[src*="/sidebar-v2/"],
+.sidebar-v2 a.active img[src*="/sidebar-v2/"],
+#sidebar-v2 a.active img[src*="/sidebar-v2/"],
+nav.sidebar a.active img[src*="/sidebar-v2/"] {
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(33%)
+        sepia(34%)
+        saturate(1168%)
+        hue-rotate(299deg)
+        brightness(95%)
+        contrast(91%) !important;
+}
+
+/* =========================================
+   SIDEBAR SECTION LABELS
+   ========================================= */
+
+aside .group-title,
+aside .nav-title,
+.sidebar .group-title,
+.sidebar .nav-title,
+.sidebar-v2 .group-title,
+.sidebar-v2 .nav-title,
+#sidebar-v2 .group-title,
+#sidebar-v2 .nav-title {
+    color: var(--text-secondary) !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* =========================================
+   SIDEBAR MAIN HEADING
+   ========================================= */
+
+.sidebar-v2-location #sidebar-v2 .menu-title,
+.sidebar-v2-location #sidebar-v2 .menu-title *,
+.sidebar-v2 #sidebar-v2 .menu-title,
+.sidebar-v2 #sidebar-v2 .menu-title *,
+#sidebar-v2 .menu-title,
+#sidebar-v2 .menu-title * {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    --tw-text-opacity: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .menu-title span,
+.sidebar-v2 #sidebar-v2 .menu-title span,
+#sidebar-v2 .menu-title span {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    --tw-text-opacity: 1 !important;
+}
+
+/* =========================================
+   SIDEBAR SUB-HEADING
+   ========================================= */
+
+.sidebar-v2-location #sidebar-v2 .default-bg-color,
+.sidebar-v2-location #sidebar-v2 .default-bg-color *,
+.sidebar-v2 #sidebar-v2 .default-bg-color,
+.sidebar-v2 #sidebar-v2 .default-bg-color *,
+#sidebar-v2 .default-bg-color {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.sidebar-v2-location #sidebar-v2 .default-bg-color,
+.sidebar-v2 #sidebar-v2 .default-bg-color,
+#sidebar-v2 .default-bg-color {
+    color: var(--text-secondary) !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+}
+
+/* =========================================
+   LOCATION SWITCHER
+   ========================================= */
+
+#location-switcher-sidbar-v2 {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 7px !important;
+    box-shadow: 0 2px 6px rgba(37, 16, 68, 0.12) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#location-switcher-sidbar-v2
+span.hl_text-overflow.w-full.text-xs.hl_location-title {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+#location-switcher-sidbar-v2
+span.hl_text-overflow.w-full {
+    background: transparent !important;
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+}
+
+#location-switcher-sidbar-v2 span,
+#location-switcher-sidbar-v2 p,
+#location-switcher-sidbar-v2 label {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+#location-switcher-sidbar-v2 svg,
+#location-switcher-sidbar-v2 i {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+}
+
+#location-switcher-sidbar-v2:hover {
+    background: var(--background-pink) !important;
+    border-color: var(--soft-pink) !important;
+}
+
+/* =========================================
+   SUB-ACCOUNT POPUP
+   ========================================= */
+
+body [role="dialog"],
+body [role="listbox"],
+body [role="menu"] {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999 !important;
+}
+
+/* =========================================
+   SUB-ACCOUNT SEARCH
+   ========================================= */
+
+input[placeholder="Search for a sub-account"],
+input[placeholder*="Search for a sub-account"],
+input[placeholder*="sub-account"] {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 7px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+input[placeholder="Search for a sub-account"]::placeholder,
+input[placeholder*="Search for a sub-account"]::placeholder,
+input[placeholder*="sub-account"]::placeholder {
+    color: var(--text-secondary) !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+    opacity: 1 !important;
+}
+
+/* =========================================
+   SUB-ACCOUNT RESULTS
+   ========================================= */
+
+body [role="option"],
+body [role="listitem"],
+body [role="listbox"] > div,
+body [role="listbox"] > li,
+body [role="dialog"] [role="option"],
+body [role="dialog"] [role="listitem"] {
+    background: var(--white) !important;
+    color: var(--secondary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body [role="option"] span,
+body [role="option"] div,
+body [role="option"] p,
+body [role="listitem"] span,
+body [role="listitem"] div,
+body [role="listitem"] p,
+body [role="listbox"] > div span,
+body [role="listbox"] > div div,
+body [role="listbox"] > div p,
+body [role="listbox"] > li span,
+body [role="listbox"] > li div,
+body [role="listbox"] > li p,
+body [role="dialog"] [role="option"] span,
+body [role="dialog"] [role="option"] div,
+body [role="dialog"] [role="option"] p,
+body [role="dialog"] [role="listitem"] span,
+body [role="dialog"] [role="listitem"] div,
+body [role="dialog"] [role="listitem"] p {
+    color: var(--secondary) !important;
+    -webkit-text-fill-color: var(--secondary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body [role="option"] strong,
+body [role="option"] b,
+body [role="listitem"] strong,
+body [role="listitem"] b,
+body [role="listbox"] strong,
+body [role="listbox"] b {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+body [role="option"] svg,
+body [role="option"] i,
+body [role="listitem"] svg,
+body [role="listitem"] i,
+body [role="listbox"] svg,
+body [role="listbox"] i,
+body [role="dialog"] [role="option"] svg,
+body [role="dialog"] [role="option"] i,
+body [role="dialog"] [role="listitem"] svg,
+body [role="dialog"] [role="listitem"] i {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body [role="option"] svg *,
+body [role="listitem"] svg *,
+body [role="listbox"] svg *,
+body [role="dialog"] [role="option"] svg *,
+body [role="dialog"] [role="listitem"] svg * {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+}
+
+/* =========================================
+   SUB-ACCOUNT AVATARS
+   ========================================= */
+
+body [role="option"] [class*="avatar"],
+body [role="option"] [class*="Avatar"],
+body [role="listitem"] [class*="avatar"],
+body [role="listitem"] [class*="Avatar"],
+body [role="listbox"] [class*="avatar"],
+body [role="listbox"] [class*="Avatar"] {
+    background: var(--background-pink) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body [role="option"] [class*="avatar"] *,
+body [role="option"] [class*="Avatar"] *,
+body [role="listitem"] [class*="avatar"] *,
+body [role="listitem"] [class*="Avatar"] *,
+body [role="listbox"] [class*="avatar"] *,
+body [role="listbox"] [class*="Avatar"] * {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* =========================================
+   SUB-ACCOUNT HOVER
+   ========================================= */
+
+body [role="option"]:hover,
+body [role="listitem"]:hover,
+body [role="listbox"] > div:hover,
+body [role="listbox"] > li:hover {
+    background: var(--background-pink) !important;
+    color: var(--text-primary) !important;
+}
+
+body [role="option"]:hover span,
+body [role="option"]:hover div,
+body [role="option"]:hover p,
+body [role="listitem"]:hover span,
+body [role="listitem"]:hover div,
+body [role="listitem"]:hover p,
+body [role="listbox"] > div:hover span,
+body [role="listbox"] > div:hover div,
+body [role="listbox"] > div:hover p,
+body [role="listbox"] > li:hover span,
+body [role="listbox"] > li:hover div,
+body [role="listbox"] > li:hover p {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* =========================================
+   SUB-ACCOUNT POPUP BORDERS
+   ========================================= */
+
+body [role="dialog"],
+body [role="listbox"] {
+    border-color: var(--border-color) !important;
+}
+
+/* =========================================
+   GO BACK BUTTON
+   ========================================= */
+
+#backButtonv2 {
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--soft-pink) !important;
+    border-radius: 7px !important;
+    box-shadow: 0 1px 4px rgba(37, 16, 68, 0.06) !important;
+}
+
+#backButtonv2 span,
+#backButtonv2 div,
+#backButtonv2 p {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+#backButtonv2 svg,
+#backButtonv2 i,
+#backButtonv2 svg * {
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
+    stroke: var(--primary) !important;
+}
+
+#backButtonv2:hover {
+    background: var(--background-pink) !important;
+    color: var(--text-primary) !important;
+}
+
+/* =========================================
+   COLLAPSE BUTTONS
+   ========================================= */
+
+.sidebar-v2-agency #sidebar-v2 .hl_collapse-button,
+.sidebar-v2 #sidebar-v2 .hl_collapse-button,
+#sidebar-v2 .hl_collapse-button,
+.sidebar-v2 .hl_collapse-button {
+    background: var(--white) !important;
+    color: var(--primary) !important;
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    border-style: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 7px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.sidebar-v2-agency #sidebar-v2 .hl_collapse-button svg,
+.sidebar-v2-agency #sidebar-v2 .hl_collapse-button i,
+.sidebar-v2 #sidebar-v2 .hl_collapse-button svg,
+.sidebar-v2 #sidebar-v2 .hl_collapse-button i,
+#sidebar-v2 .hl_collapse-button svg,
+#sidebar-v2 .hl_collapse-button i,
+.sidebar-v2 .hl_collapse-button svg,
+.sidebar-v2 .hl_collapse-button i {
+    color: var(--text-primary) !important;
+    fill: var(--text-primary) !important;
+    stroke: var(--text-primary) !important;
+}
+
+.sidebar-v2-agency #sidebar-v2 .hl_collapse-button:hover,
+.sidebar-v2 #sidebar-v2 .hl_collapse-button:hover,
+#sidebar-v2 .hl_collapse-button:hover,
+.sidebar-v2 .hl_collapse-button:hover {
+    background: var(--background-pink) !important;
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* =========================================
+   SIDEBAR BADGES
+   ========================================= */
+
+aside .badge,
+.sidebar .badge,
+.sidebar-v2 .badge,
+#sidebar-v2 .badge {
+    background: var(--primary) !important;
     color: var(--white) !important;
-    fill: currentColor;
 }
 
-/* Navigation text */
-nav a,
-aside a {
-    font-weight: 500;
+/* =========================================
+   SIDEBAR DIVIDERS
+   ========================================= */
+
+aside hr,
+.sidebar hr,
+.sidebar-v2 hr,
+#sidebar-v2 hr {
+    border-color: var(--border-color) !important;
 }
 
-/* Sidebar scrollbar */
-nav::-webkit-scrollbar,
-aside::-webkit-scrollbar {
+/* =========================================
+   SIDEBAR SCROLLBAR
+   ========================================= */
+
+aside::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar,
+.sidebar-v2::-webkit-scrollbar,
+#sidebar-v2::-webkit-scrollbar {
     width: 5px;
 }
 
-nav::-webkit-scrollbar-thumb,
-aside::-webkit-scrollbar-thumb {
+aside::-webkit-scrollbar-track,
+.sidebar::-webkit-scrollbar-track,
+.sidebar-v2::-webkit-scrollbar-track,
+#sidebar-v2::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+aside::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb,
+.sidebar-v2::-webkit-scrollbar-thumb,
+#sidebar-v2::-webkit-scrollbar-thumb {
     background: var(--soft-pink);
     border-radius: 10px;
 }
+
+aside::-webkit-scrollbar-thumb:hover,
+.sidebar::-webkit-scrollbar-thumb:hover,
+.sidebar-v2::-webkit-scrollbar-thumb:hover,
+#sidebar-v2::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* =========================================
+   END — SIDEBAR & NAVIGATION
+   ========================================= */
 /* =========================================
    SinceThen GHL Agency Theme
    Dashboard
