@@ -1,6 +1,6 @@
 (function () {
     const cssUrl =
-        "https://cdn.jsdelivr.net/gh/BryBTG/SinceThenGHLAgency@v1.0.0/dist/main.css";
+        "https://cdn.jsdelivr.net/gh/BryBTG/SinceThenGHLAgency@v1.0.2/dist/main.css";
 
     // Prevent duplicate loading
     if (document.querySelector('link[data-since-then-theme]')) {
